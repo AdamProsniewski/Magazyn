@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('../models//itemPost');
+const upload = require('../middleware//upload');
+
 
 //routes
 
@@ -14,11 +16,12 @@ router.get('/', async (req,res) => {
     }
 });
 //dodawanie
-router.post('/', async (req,res) => {
+router.post('/', upload.single('ItemImage'), async (req,res) => {
     const post = new Post({
         title: req.body.title,
         description: req.body.description,
-        price: req.body.price
+        price: req.body.price,
+        image: req.body.image
     });
     try{
    const savedPost = await post.save()
