@@ -56,7 +56,14 @@ router.patch('/:postId', async (req,res) => {
     try {
        const updatedPost = await Post.updateOne(
            {_id: req.params.postId}, 
-           {$set: {title: req.body.title}}
+           {
+               $set: {
+                    title: req.body.title,
+                    description: req.body.description,
+                    price: req.body.price,
+                    image: req.file.path
+               }
+           }
            );
            res.json(updatedPost);
     } catch (err) {
