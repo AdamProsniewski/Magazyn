@@ -52,7 +52,7 @@ router.delete('/:postId', async (req,res) => {
     };
 });
 //aktualizacja postu
-router.patch('/:postId', async (req,res) => {
+router.patch('/:postId', upload.single('ItemImage'), async (req,res) => {
     try {
        const updatedPost = await Post.updateOne(
            {_id: req.params.postId}, 

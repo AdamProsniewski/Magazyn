@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const OrderSchema = mongoose.Schema({
     _id: mongoose.Types.ObjectId,
-    itemsIds: [{
+    itemsIds: {
         type: String,
         required: true
-    }],
+    },
     date: {
         type: Date,
         default: Date.now
