@@ -78,7 +78,7 @@ forma:
 
 
 
-## RZeczy dodatkowe
+## Rzeczy dodatkowe
 
 Asynchronicznie wykonywane funkcje.
 
