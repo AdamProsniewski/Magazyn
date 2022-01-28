@@ -28,7 +28,7 @@ Hasła użytkowników są szyfrowane, wraz z przedmiotem można przesłać obraz
 - Wyświetlanie konkretnego: GET localhost:3000/items/id
 - Dodawanie POST localhost:3000/items
 forma:
-![Example screenshot](./screen1.png)
+![Example screenshot](./screen1.jpg)
 - Edytowanie PATCH localhost:3000/items/id - forma taka sama jak dodawanie
 - Usuwanie DELETE localhost:3000/items/id
 2. Pracownicy
